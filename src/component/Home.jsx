@@ -1,22 +1,23 @@
 import React from 'react';
+import style from './Home.module.css'
 import Todos from './Todos';
 
 const dummyTodos=[
     {
         id:1,
-        name: 'Anisul Islam',
+        title: 'Todo Title1',
         desc: 'todo1 description is here'
     },
     {
         id:2,
-        name: 'Rizwan Islam',
+        title: 'Todo Title2',
         desc: 'todo2 description is here'
     },
 ]
 
 const Home = () => {
     return (
-        <div>
+        <div className={style.container}>
            <Todos todos={dummyTodos}/>
         </div>
     );

@@ -2,11 +2,11 @@ import React from 'react';
 import Todo from './Todo';
 
 const Todos = (props) => {
-    console.log(props)
+    console.log(props.todos)
     return (
        <section>
         {
-            props.map((todo)=><Todo name={todo.name} desc={todo.desc} key={todo.id}/>)
+            props.todos.map((todo)=><Todo todo={todo} key={todo.id}/>)
         }
        </section>
     );

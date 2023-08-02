@@ -4,7 +4,12 @@ import { RiDeleteBinLine } from "react-icons/ri";
 
 const Todo = (props) => {
   
-    const {title, desc, id}=props.todo;
+  const { title, desc } = props.todo;
+  const {  id } = props;
+  
+  const handleClick = (id) => {
+    props.onRemoveItem(id);
+  }
 
    
     // console.log(handleDeleteBtn)
@@ -15,7 +20,7 @@ const Todo = (props) => {
             <p>{desc}</p>
         </div>
         <div>
-            <button className={style.btn}  >{RiDeleteBinLine()}</button>
+            <button className={style.btn}  onClick={()=>{handleClick(id)}} >{RiDeleteBinLine()}</button>
         </div>
       </article>
     );
